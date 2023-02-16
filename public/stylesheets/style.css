@@ -1,19 +1,42 @@
-body {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+:root {
+  --main-c: mediumpurple;
 }
 
-a {
-  color: #00B7FF;
+/*헤더 스타일*/
+header{
+  padding: 3px;
+  text-align: center;
+  background-color: var(--main-c);
+}
+h1{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: rgb(250, 248, 255);
 }
 
-/*nav 그리드*/
-nav ul{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  text-align : center;
+/*nav 스타일*/
+.list-group-horizontal .list-group-item{
+  width:33.3%;
 }
-nav ul li{
-  display: inline;
+.list-group{
+  --bs-list-group-color: var(--main-c);
+  --bs-list-group-border-color: var(--main-c);
+}
+nav li{
+  cursor: pointer;
+}
+
+/*시험 설정 부분 스타일*/
+.btn{
+  --bs-btn-color: white;
+  background-color: var(--main-c);
+}
+select{
+  cursor: pointer;
+  color: var(--main-c);
+  border-width: 2px;
+  border-color: var(--main-c);
+  border-radius: 2px;
 }
 
 /*시험 설정 부분 그리드*/
@@ -35,4 +58,18 @@ nav ul li{
 }
 #test_head img{
   width: 60vw;
+}
+
+/*본문 스타일*/
+.index-par{
+  margin: 8px;
+  padding: 5px;
+  border: 3px dashed var(--main-c);
+  border-radius: 3px;
+}
+.index-par h2{
+  margin-bottom: 5px;
+  padding: 5px;
+  text-align: center;
+  border-bottom: 2px solid var(--main-c);
 }
