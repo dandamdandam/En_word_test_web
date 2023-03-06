@@ -4,13 +4,15 @@
 
 /*헤더 스타일*/
 header{
+  height: 115px;
   padding: 3px;
   text-align: center;
   background-color: var(--main-c);
 }
 h1{
-  padding-top: 10px;
-  padding-bottom: 10px;
+  height: 40px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   color: rgb(250, 248, 255);
 }
 
@@ -72,4 +74,42 @@ select{
   padding: 5px;
   text-align: center;
   border-bottom: 2px solid var(--main-c);
+}
+
+/*시계 스타일*/
+#clock__hour, 
+#clock__minutes, 
+#clock__seconds {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  top: calc(115px + 8.8vw);
+  left: 40.8vw;
+}
+
+#clock__hour::before {
+  content: '';
+  position: absolute;
+  background-color: black;
+  width: 0.25vw;
+  height: 2vw;
+  border-radius: .75rem;
+}
+
+#clock__minutes::before {
+  content: '';
+  position: absolute;
+  background-color: black;
+  width: 0.25vw;
+  height: 3vw;
+  border-radius: .75rem;
+}
+
+#clock__seconds::before {
+  content: '';
+  position: absolute;
+  background-color: var(--main-c);
+  width: 0.2vw;
+  height: 3.5vw;
+  border-radius: .75rem;
 }

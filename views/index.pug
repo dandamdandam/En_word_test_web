@@ -3,6 +3,9 @@ extends layout
 block content
   div#test_head
     img(src='/images/timer.jpg', alt='타이머이미지', width=600)
+    #clock__hour 
+    #clock__minutes
+    #clock__seconds
     form#set 
       select(name='시간')
         option(value='none', selected, disabled, hidden) 시간선택 
@@ -63,3 +66,4 @@ block content
         li check를 누르지 않은 상태가 답입력시간에서 정한 시간이 지나면 시험이 취소됩니다&#40;다른 사이트에 접속하는 것을 막기 위해서 입니다&#41;.
         li 단어입력단계에서 입력한 단어의 의미가 여러개일 경우, 하나만 써야 답으로 인정됩니다.
         li 불필요한 띄어쓰기는 채점에 혼동을 줄 수 있으니 주의해주세요.
+  script(src="/javascripts/timer.js")
