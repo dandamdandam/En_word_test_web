@@ -1,6 +1,12 @@
 :root {
   --main-c: mediumpurple;
 }
+@font-face {
+  font-family: 'ChosunSm';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.1/ChosunSm.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
 /*헤더 스타일*/
 header{
@@ -23,6 +29,7 @@ h1{
 .list-group{
   --bs-list-group-color: var(--main-c);
   --bs-list-group-border-color: var(--main-c);
+  box-shadow: 0px 3px 5px rgb(84, 65, 123);
 }
 nav li{
   cursor: pointer;
@@ -39,6 +46,12 @@ select{
   border-width: 2px;
   border-color: var(--main-c);
   border-radius: 2px;
+}
+#test_head #set button{
+  box-shadow: 0px 3px 5px gray;
+}
+#test_head #timer{
+  filter: drop-shadow(5px 5px 5px gray);
 }
 
 /*시험 설정 부분 그리드*/
@@ -58,7 +71,7 @@ select{
 #set select{
   width: 17vw;
 }
-#test_head img{
+#test_head #timer{
   width: 60vw;
 }
 
@@ -66,14 +79,18 @@ select{
 .index-par{
   margin: 8px;
   padding: 5px;
-  border: 3px dashed var(--main-c);
+  border: 1px solid var(--main-c);
   border-radius: 3px;
+  font-family: 'ChosunSm';
+  font-size: 1.1rem;
 }
 .index-par h2{
   margin-bottom: 5px;
   padding: 5px;
-  text-align: center;
-  border-bottom: 2px solid var(--main-c);
+}
+.index-par h2::before{
+  content: 'ο ';
+  font-family: var(--bs-body-font-family);
 }
 
 /*시계 스타일*/
