@@ -1,4 +1,29 @@
 extends layout
 
 block content
-    p on-develop
+    article 
+        #how_to
+            h2 !입력방법!
+            #example
+            | word 단어
+            | test 시험
+            | book 책,예약하다
+            ul 
+                li 단어를 영어 + &amp;&amp; + 뜻 형식으로 적어주세요.
+                li 한 단어의 뜻이 여러 개라면 컴마&#40;,&#41;로 띄어쓰기 없이 구분해서 입력해주세요.
+                    br
+                    | 뜻이 여러 개라면 시험을 볼 때 랜덤으로 뜻을 제시하거나 답으로 받습니다.
+                li 이미 추가된 단어는 밑에 표시 됩니다.
+                li 입력완료 버튼을 눌러주어야 추가됩니다.
+    form#words_input
+        textarea
+        button(type='button') 저장
+    button#re_load(type='button') 새로고침
+    table#print_words
+        thead
+            tr 
+                th 단어
+                th 뜻
+                th 삭제하기
+        tbody#add_here
+    script(src="/javascripts/input.js")
