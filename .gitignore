@@ -104,7 +104,7 @@ dist
 .tern-port
 
 # mongoDB key
-routes/config/dev.js
+public/javascripts/config/dev.js
 
 # mynote
 memo.md
