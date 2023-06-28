@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import SelectBox from "./components/selectBox";
 import clock from "./javascripts/timer.js";
+import './style.css';
 
 function TestSet(){
     return(

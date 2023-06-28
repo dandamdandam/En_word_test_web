@@ -2,13 +2,11 @@ import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect } from "react";
 import TestSet from './testSetting';
 import Header from './components/header';
-import './style.css';
 
 function App() {
   return (
     <div className='App'>
       <BrowserRouter>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"/>
         <Header/>
         <ScrollToTop/>
         <Routes>
