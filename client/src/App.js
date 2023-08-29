@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route, useLocation, useNavigate } from 'react-router-dom';
 import { useEffect } from "react";
+
 import TestSet from './testSetting';
 import InputPage from './inputPage';
-import Header from './components/header';
 
 function App() {
   return (
@@ -24,7 +24,7 @@ function App() {
 function Mapping(){
   var nav=useNavigate();
   useEffect(() => {
-      nav("/input")
+      nav("/main")
   }, [nav]);
   
   return null;

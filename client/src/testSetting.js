@@ -47,8 +47,11 @@ function TestHead(){
     const second_ref=useRef();
 
     useEffect(() => {
-        setInterval(function(){clock(hour_ref, minute_ref, second_ref)}, 1000) // 1000 = 1s
-    });
+        var interval = setInterval(function(){clock(hour_ref, minute_ref, second_ref)}, 1000); // 1000 = 1s
+        return () => {
+            clearInterval(interval);
+        };
+    }, []);
 
     return(
         <div id="test_head">

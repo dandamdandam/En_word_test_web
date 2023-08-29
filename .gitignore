@@ -105,6 +105,3 @@ dist
 
 # mongoDB key
 /api/public/javascripts/config/dev.js
-
-# mynote
-memo.md
