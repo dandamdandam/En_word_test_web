@@ -46,7 +46,7 @@ exports.load_data=async function(){
 exports.save_data=function(req){
     var words = new wordsModel();
     words.word=req.body.word;
-    words.meanings=req.body['meanings[]'];
+    words.meanings=req.body['meanings'];
     try{
       words.save();
       return {status: "SUCCESS"};

@@ -1,4 +1,6 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
+
+import Header from "./components/header";
 import SelectBox from "./components/selectBox";
 import clock from "./javascripts/timer.js";
 import './style.css';
@@ -6,9 +8,10 @@ import './style.css';
 function TestSet(){
     return(
         <div id="testSetting">
+            <Header/>
             <TestHead/>
             <article>
-                <div class="index-par">
+                <div className="index-par">
                     <h2>시험을 시작하기 전!</h2>
                     <ol> 
                         <li>단어입력 창에서 단어들을 입력하고 제출합니다. </li>
@@ -23,7 +26,7 @@ function TestSet(){
                         <li>모두 정한 후에는 START 버튼을 눌러줍니다.</li>
                     </ol>
                 </div>
-                <div class="index-par">
+                <div className="index-par">
                     <h2>시험 전 시험방법 숙지!</h2>
                     <ul> 
                         <li>답을 입력하는 시간을 제외하고는 check가 써있는 사각버튼에 마우스를 올려두어야&#40;스마트폰의 경우 누르고 있어야&#41; 합니다.</li>
@@ -39,16 +42,20 @@ function TestSet(){
 
 function TestHead(){
 
+    const hour_ref=useRef();
+    const minute_ref=useRef();
+    const second_ref=useRef();
+
     useEffect(() => {
-        setInterval(clock, 1000) // 1000 = 1s
+        setInterval(function(){clock(hour_ref, minute_ref, second_ref)}, 1000) // 1000 = 1s
     });
 
     return(
         <div id="test_head">
             <img id="timer" src="images/timer.png" alt="타이머이미지" width="600"/>
-            <div id="clock__hour"> </div>
-            <div id="clock__minutes"></div>
-            <div id="clock__seconds"></div>
+            <div id="clock__hour" ref={hour_ref}> </div>
+            <div id="clock__minutes" ref={minute_ref} ></div>
+            <div id="clock__seconds" ref={second_ref} ></div>
             <form id="set"> 
                 <SelectBox name="시간" st={10} end={61} step={10} suffix="m"/>
                 <SelectBox name="문제수" st={10} end={101} step={10} suffix="개"/>
@@ -61,7 +68,7 @@ function TestHead(){
                     <option value="so_sp,m">소리⇒스펠링&amp;의미</option>
                 </select>
                 <SelectBox name="답입력시간" st={10} end={61} step={10} suffix="s"/>
-                <button class="btn" type="submit">START</button>
+                <button className="btn" type="submit">START</button>
             </form>
         </div>
     );

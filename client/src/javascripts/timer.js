@@ -3,7 +3,7 @@
  * 참고: https://github.com/bedimcode/responsive-clock-ui
  */
 
-const clock = () =>{
+const clock = (hour, minute, second) =>{
     let date = new Date()
 
     let hh = date.getHours() * 30+180,
@@ -11,8 +11,8 @@ const clock = () =>{
         ss = date.getSeconds() * 6+180
         
     // We add a rotation to the elements
-    document.getElementById('clock__hour').style.transform = `rotateZ(${hh + (mm-180)/ 12}deg)`
-    document.getElementById('clock__minutes').style.transform = `rotateZ(${mm}deg)`
-    document.getElementById('clock__seconds').style.transform = `rotateZ(${ss}deg)`
+    hour.current.style.transform = `rotateZ(${hh + (mm-180)/ 12}deg)`
+    minute.current.style.transform = `rotateZ(${mm}deg)`
+    second.current.style.transform = `rotateZ(${ss}deg)`
 }
 export default clock;
