@@ -1,0 +1,60 @@
+@import './style.css?after';
+
+#inputPage .grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+/* how_to */
+#how_to{
+    font-family: 'ChosunSm';
+}
+#how_to #example{
+    display: flex;
+    flex-direction: column;
+
+    padding: 5px;
+
+    border-top: solid var(--main-c);
+    border-bottom: solid var(--main-c);
+}
+#how_to ul{
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+/* words_input */
+#words_input{
+    display: grid;
+    grid-template-rows: 85% 15%;
+}
+#words_input textarea{
+    padding: 0px 10px;
+}
+#words_input button{
+    border: none;
+
+    background-color: var(--main-c);
+    color: white;
+}
+
+/* 단어표 */
+#inputPage #re_load{
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 6px;
+    
+    border: solid var(--main-c);
+    border-radius: 5px;
+    
+    color: var(--main-c);
+    background-color: white;
+}
+#inputPage .delete_data_bu{
+    border: solid var(--main-c);
+    border-radius: 5px;
+    
+    color: var(--main-c);
+    background-color: white;
+}

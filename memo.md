@@ -16,7 +16,6 @@ wordsModel.findByIdAndDelete(id).then(function(doc){console.log(doc)});
 
 ## 할 일
 
-- testSetting의 clock => 렌더링 될때 쓰이고 페이지 이동할떄 끊어지게 설정
 - inputPage 스타일
 
 ### 서버 express, 프론트 react로 구성

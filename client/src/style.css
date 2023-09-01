@@ -1,5 +1,6 @@
 :root {
   --main-c: mediumpurple;
+  --point-c: khaki;
 }
 @font-face {
   font-family: 'ChosunSm';
@@ -20,6 +21,91 @@ h1{
   margin-top: 10px;
   margin-bottom: 10px;
   color: rgb(250, 248, 255);
+}
+
+/*전체적인 패딩*/
+.padding_all{
+  padding: 10px;
+}
+
+/* 표 스타일 */
+table {
+  border: 1px var(--main-c) solid;
+  font-size: .9em;
+  box-shadow: 0 2px 5px rgba(0,0,0,.25);
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+th {
+text-align: left;
+}
+
+thead {
+font-weight: bold;
+color: #fff;
+background: var(--main-c);
+}
+
+td, th {
+padding: 1em .5em;
+vertical-align: middle;
+}
+
+td {
+border-bottom: 1px solid rgba(0,0,0,.1);
+background: #fff;
+}
+
+/* 설명에 쓰이는 마커 */
+.marker{
+  background-color: var(--point-c);
+}
+
+@media all and (max-width: 768px) {
+  
+  table, thead, tbody, th, td, tr {
+      display: block;
+  }
+
+  th {
+      text-align: right;
+  }
+
+  table {
+      position: relative; 
+      padding-bottom: 0;
+      border: none;
+      box-shadow: 0 0 10px rgba(0,0,0,.2);
+  }
+
+  thead {
+      float: left;
+      white-space: nowrap;
+  }
+
+  tbody {
+      overflow-x: auto;
+      overflow-y: hidden;
+      position: relative;
+      white-space: nowrap;
+  }
+
+  tr {
+      display: inline-block;
+      vertical-align: top;
+  }
+
+  th {
+      border-bottom: 1px solid var(--main-c);
+  }
+
+  td {
+      border-bottom: 1px solid #e5e5e5;
+  }
+
 }
 
 /*nav 스타일*/

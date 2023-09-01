@@ -42,7 +42,7 @@ function LoadTable({words, setwords}) {
                     return (
                         <tr key={i._id}> 
                             <td>{i.word}</td> 
-                            <td>{i.meanings}</td> 
+                            <td>{i.meanings.join(', ')}</td> 
                             <td><button className='delete_data_bu' onClick={() => del(i._id, setwords)}>삭제</button></td> 
                         </tr>
                     )
