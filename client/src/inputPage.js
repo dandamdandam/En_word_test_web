@@ -2,7 +2,7 @@ import { useRef, useState } from 'react';
 
 import { LoadTable, handle_input, handle_reload } from './javascripts/getWordInput.js';
 import Header from './components/header.js';
-import './inputPage.css?after';
+import './styles/inputPage.css?after';
 
 function InputPage(){
     // inputPage에 표시할 입력된 단어 리스트(json)

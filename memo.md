@@ -16,7 +16,7 @@ wordsModel.findByIdAndDelete(id).then(function(doc){console.log(doc)});
 
 ## 할 일
 
-- inputPage 스타일
+- 단어시험, 시험결과확인 페이지 구상(피그마)
 
 ### 서버 express, 프론트 react로 구성
 
