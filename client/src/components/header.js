@@ -9,6 +9,7 @@ function Header(){
                     <li className='list-group-item'><Link className="link" to="/main">테스트</Link></li>
                     <li className='list-group-item'><Link className="link" to="/input">단어입력</Link></li>
                     <li className='list-group-item'>시험기록</li>
+                    <li className='list-group-item'>사용방법</li>
                 </ul>
             </nav>
         </header>

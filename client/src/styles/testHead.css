@@ -1,0 +1,50 @@
+/*그리드*/
+#test_head{
+display: grid;
+grid-template-columns: 60vw 1fr;
+}
+#test_head #timer{
+width: 60vw;
+}
+
+#test_head #timer{
+    filter: drop-shadow(5px 5px 5px gray);
+}
+
+/*시계 스타일*/
+#clock__hour, 
+#clock__minutes, 
+#clock__seconds {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  top: calc(115px + 7.3vw);
+  left: 44.7vw;
+}
+
+#clock__hour::before {
+  content: '';
+  position: absolute;
+  background-color: black;
+  width: 0.25vw;
+  height: 2vw;
+  border-radius: .75rem;
+}
+
+#clock__minutes::before {
+  content: '';
+  position: absolute;
+  background-color: black;
+  width: 0.25vw;
+  height: 3vw;
+  border-radius: .75rem;
+}
+
+#clock__seconds::before {
+  content: '';
+  position: absolute;
+  background-color: var(--main-c);
+  width: 0.2vw;
+  height: 3.5vw;
+  border-radius: .75rem;
+}
