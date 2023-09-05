@@ -16,7 +16,11 @@ wordsModel.findByIdAndDelete(id).then(function(doc){console.log(doc)});
 
 ## 할 일
 
-- 단어시험, 시험결과확인 페이지 구상(피그마)
+- `https://stackoverflow.com/questions/9230932/file-structure-of-mongoose-nodejs-project` 참고해서 api 폴더 구조 변경
+- 시험결과 스키마 만들기
+- 단어시험페이지(/test) 세팅페이지(/main)와 연결 + 변수 전달(시간, 문제 수, 문제 유형)
+  - useNavigator와 useLocation을 이용해 state형식으로 변수 전달하기
+  - 서버에서 가져오기
 
 ### 서버 express, 프론트 react로 구성
 

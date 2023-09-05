@@ -3,6 +3,7 @@ import { useEffect } from "react";
 
 import TestSet from './testSetting';
 import InputPage from './inputPage';
+import TestPage from './testPage';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Route path={"/"} element={<Mapping />}></Route>
         <Route path={"/main"} element={<TestSet />}></Route>
         <Route path={"/input"} element={<InputPage/>}></Route>
+        <Route path={"/test"} element={<TestPage/>}></Route>
       </Routes>
     </BrowserRouter>
   );
