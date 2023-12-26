@@ -1,7 +1,7 @@
-import Header from "./components/header";
-import SelectBox from "./components/selectBox";
-import TestHead from "./components/testHead";
-import './styles/testSetting.css?after';
+import Header from "../components/header";
+import SelectBox from "../components/selectBox";
+import TestHead from "../components/testHead";
+import '../styles/testSetting.css?after';
 
 function TestSet(){
     return(

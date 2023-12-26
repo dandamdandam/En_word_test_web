@@ -1,21 +1,25 @@
 import { BrowserRouter, Routes, Route, useLocation, useNavigate } from 'react-router-dom';
 import { useEffect } from "react";
 
-import TestSet from './testSetting';
-import InputPage from './inputPage';
-import TestPage from './testPage';
+import TestSet from './pages/testSetting';
+import InputPage from './pages/inputPage';
+import TestPage from './pages/testPage';
+import { TempIdContext } from './javascripts/tempIdContext';
 
 function App() {
+
   return (
-    <BrowserRouter>
-      <ScrollToTop/>
-      <Routes>
-        <Route path={"/"} element={<Mapping />}></Route>
-        <Route path={"/main"} element={<TestSet />}></Route>
-        <Route path={"/input"} element={<InputPage/>}></Route>
-        <Route path={"/test"} element={<TestPage/>}></Route>
-      </Routes>
-    </BrowserRouter>
+    <GlobalState>
+      <BrowserRouter>
+        <ScrollToTop/>
+        <Routes>
+          <Route path={"/"} element={<Mapping />}></Route>
+          <Route path={"/main"} element={<TestSet />}></Route>
+          <Route path={"/input"} element={<InputPage/>}></Route>
+          <Route path={"/test"} element={<TestPage/>}></Route>
+        </Routes>
+      </BrowserRouter>
+    </GlobalState>
   );
 }
 
@@ -44,6 +48,27 @@ function ScrollToTop() {
   }, [pathname]);
 
   return null;
+}
+
+/**
+ * 전역 상태 관리
+ */
+function GlobalState({ children }) {
+
+  useEffect(() => {
+
+    return() => {
+      alert("");
+    }
+  },[])
+
+  return (
+    <section>
+      <TempIdContext.Provider>
+        {children}
+      </TempIdContext.Provider>
+    </section>
+  );
 }
 
 export default App;
