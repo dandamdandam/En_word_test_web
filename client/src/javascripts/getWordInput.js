@@ -62,7 +62,7 @@ function LoadTable({words, setwords}) {
  */
 load = async (setwords) => {
     try{
-        var res = await axios.get('http://localhost:9000/word/load');
+        var res = await axios.get('/word/load');
         setwords(res.data);
     } catch(error){
         console.log(error);
@@ -82,7 +82,7 @@ write = (word, meanings, setwords) => {
         'meanings': meanings
     };
     
-    axios.post('http://localhost:9000/word/write', postdata, {
+    axios.post('http:///word/write', postdata, {
       headers: {
         'Content-Type': 'application/json'
       }
@@ -107,7 +107,7 @@ del = (id, setwords) => {
         '_id':id
     };
 
-    axios.post('http://localhost:9000/word/del', postdata, {
+    axios.post('http:///word/del', postdata, {
       headers: {
         'Content-Type': 'application/json'
       }
