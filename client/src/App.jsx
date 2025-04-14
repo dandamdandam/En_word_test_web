@@ -1,4 +1,8 @@
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  useLocation,
+} from "react-router-dom";
 import { useEffect } from "react";
 
 import TestSet from "./pages/testSetting";
@@ -6,18 +10,34 @@ import InputPage from "./pages/inputPage";
 import TestPage from "./pages/testPage";
 import { SignInNUp, GoogleRedirect } from "./pages/signInNUpPage";
 
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <TestSet />,
+  },
+  {
+    path: "/signup",
+    element: <SignInNUp />,
+  },
+  {
+    path: "/signup/redirect",
+    element: <GoogleRedirect />,
+  },
+  {
+    path: "/input",
+    element: <InputPage />,
+  },
+  {
+    path: "/test",
+    element: <TestPage />,
+  },
+]);
+
 function App() {
   return (
-    <BrowserRouter>
+    <RouterProvider router={router}>
       <ScrollToTop />
-      <Routes>
-        <Route path={"/"} element={<SignInNUp />}></Route>
-        <Route path={"/main"} element={<TestSet />}></Route>
-        <Route path={"/input"} element={<InputPage />}></Route>
-        <Route path={"/test"} element={<TestPage />}></Route>
-        <Route path={"/signin/redirect"} element={<GoogleRedirect />}></Route>
-      </Routes>
-    </BrowserRouter>
+    </RouterProvider>
   );
 }
 
